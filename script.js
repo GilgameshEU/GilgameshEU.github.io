@@ -119,7 +119,6 @@ $(document).ready(function () {
     } else {
       url = "https://randomuser.me/api/?results=30&nat=" + selectedNationality;
     }
-
     if (field.value === "") {
       field.value = 0;
       slider.value = 0;
@@ -157,6 +156,7 @@ $(document).ready(function () {
     counter = 1;
     fetchInformation(url);
     $("#seed").text("Current seed is: ");
+    isHeaderAdded = false;
   });
 
   function fetchInformation(url) {
